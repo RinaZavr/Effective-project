@@ -1,4 +1,4 @@
-import 'package:effective/marvelView/view/marvelMainView.dart';
+import 'package:effective/marvelView/view/marvel_main.dart';
 import 'package:flutter/material.dart';
 
 void main() {
