@@ -1,4 +1,5 @@
 import 'package:effective/marvelView/consts/marvel_string_const.dart';
+import 'package:effective/marvelView/consts/marvel_url_const.dart';
 import 'package:effective/marvelView/view/marvel_card_template.dart';
 import 'package:flutter/material.dart';
 
@@ -19,13 +20,13 @@ class _MarvelListState extends State<MarvelList> {
         width: 350,
         child: PageView(
           children: const [
-            MarvelCardTemplate("img/deadpool.jpg", cardOne),
-            MarvelCardTemplate("img/ironman.jpeg", cardTwo),
-            MarvelCardTemplate("img/captain.jpg", cardThree),
-            MarvelCardTemplate("img/spiderman.jpg", cardFour),
-            MarvelCardTemplate("img/doctor.jpeg", cardFive),
-            MarvelCardTemplate("img/thor.jpg", cardSix),
-            MarvelCardTemplate("img/thanos.jpg", cardSeven),
+            MarvelCardTemplate(firstCardUrl, cardOne, cardOneDesc),
+            MarvelCardTemplate(secondCardUrl, cardTwo, cardTwoDesc),
+            MarvelCardTemplate(thirdCardUrl, cardThree, cardThreeDesc),
+            MarvelCardTemplate(fourthCardUrl, cardFour, cardFourDesc),
+            MarvelCardTemplate(fifthCardUrl, cardFive, cardFiveDesc),
+            MarvelCardTemplate(sixthCardUrl, cardSix, cardSixDesc),
+            MarvelCardTemplate(seventhCardUrl, cardSeven, cardSevenDesc),
           ],
         ),
       ),

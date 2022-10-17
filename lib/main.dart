@@ -1,3 +1,4 @@
+import 'package:effective/marvelView/view/marvel_card_desc.dart';
 import 'package:effective/marvelView/view/marvel_main.dart';
 import 'package:flutter/material.dart';
 
