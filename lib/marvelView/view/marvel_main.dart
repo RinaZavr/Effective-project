@@ -14,7 +14,7 @@ class MarvelMain extends StatelessWidget {
         children: const [
           MarvelLogo(),
           MarvelDesc(),
-          MarvelList(),
+          Expanded(child: MarvelList()),
         ],
       ),
     );

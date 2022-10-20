@@ -12,11 +12,11 @@ class MarvelList extends StatefulWidget {
 class _MarvelListState extends State<MarvelList> {
   @override
   Widget build(BuildContext context) {
+  MediaQueryData mediaQuery = MediaQuery.of(context);
+
     return Padding(
-      padding: const EdgeInsets.only(top: 50),
+      padding: EdgeInsets.symmetric(vertical: mediaQuery.size.height * 0.06, horizontal: mediaQuery.size.width * 0.06),
       child: SizedBox(
-        height: 600,
-        width: 350,
         child: PageView(
           children: const [
             MarvelCardTemplate("img/deadpool.jpg", cardOne),

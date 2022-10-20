@@ -8,27 +8,25 @@ class MarvelCardTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicWidth(
-      child: Card(
-        shadowColor: Colors.black,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(12)),
+    return Card(
+      shadowColor: Colors.black,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(12)),
+      ),
+      clipBehavior: Clip.hardEdge,
+      child: Container(
+        alignment: Alignment.bottomLeft,
+        decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage(img), fit: BoxFit.cover),
         ),
-        clipBehavior: Clip.hardEdge,
-        child: Container(
-          alignment: Alignment.bottomLeft,
-          decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage(img), fit: BoxFit.cover),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 40, bottom: 40),
-            child: Text(
-              text,
-              style: const TextStyle(
-                color: descColor,
-                fontSize: 30,
-                fontWeight: FontWeight.w700, 
-              ),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 40, bottom: 40),
+          child: Text(
+            text,
+            style: const TextStyle(
+              color: descColor,
+              fontSize: 30,
+              fontWeight: FontWeight.w700, 
             ),
           ),
         ),
