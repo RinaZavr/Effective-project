@@ -1,7 +1,7 @@
-import 'package:effective/marvelView/consts/marvel_string_const.dart';
-import 'package:effective/marvelView/consts/marvel_url_const.dart';
+import 'package:effective/marvelView/state/marvel_state.dart';
 import 'package:effective/marvelView/view/marvel_card_template.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class MarvelList extends StatefulWidget {
   const MarvelList({Key? key}) : super(key: key);
@@ -13,21 +13,21 @@ class MarvelList extends StatefulWidget {
 class _MarvelListState extends State<MarvelList> {
   @override
   Widget build(BuildContext context) {
+    MarvelState state = Provider.of<MarvelState>(context);
+
     return Padding(
       padding: const EdgeInsets.only(top: 50),
       child: SizedBox(
         height: 600,
         width: 350,
-        child: PageView(
-          children: const [
-            MarvelCardTemplate(firstCardUrl, cardOne, cardOneDesc),
-            MarvelCardTemplate(secondCardUrl, cardTwo, cardTwoDesc),
-            MarvelCardTemplate(thirdCardUrl, cardThree, cardThreeDesc),
-            MarvelCardTemplate(fourthCardUrl, cardFour, cardFourDesc),
-            MarvelCardTemplate(fifthCardUrl, cardFive, cardFiveDesc),
-            MarvelCardTemplate(sixthCardUrl, cardSix, cardSixDesc),
-            MarvelCardTemplate(seventhCardUrl, cardSeven, cardSevenDesc),
-          ],
+        child: PageView.builder(
+          itemCount: state.characters.length,
+          itemBuilder: (context, index) {
+            return MarvelCardTemplate(
+              state.getImgPath(index),
+              state.getName(index),
+              state.getId(index));
+          },
         ),
       ),
     );
