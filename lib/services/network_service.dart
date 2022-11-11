@@ -25,7 +25,6 @@ class NetworkService {
     try {
       Dio dio = Dio();
       var resp = await dio.get(url);
-      print(resp.data["data"]["results"].runtimeType);
       return resp.data["data"]["results"][0];
     } catch (e) {
       return {};

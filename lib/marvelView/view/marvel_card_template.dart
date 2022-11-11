@@ -15,7 +15,6 @@ class MarvelCardTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     MarvelState state = Provider.of<MarvelState>(context);
     state.getCharacters();
-    print(state.characters[0]);
 
     return IntrinsicWidth(
       child: Card(

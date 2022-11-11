@@ -14,6 +14,7 @@ class MarvelState extends ChangeNotifier {
   Map characterInfo = {
     'id': 0,
     'name': '',
+    'desc': '',
     'thumbnail': {'path': '', 'extension': ''}
   };
 
@@ -56,8 +57,8 @@ class MarvelState extends ChangeNotifier {
   }
 
   String getDescId() {
-    return characterInfo['desc'] == ""
-      ? "I am $getNameId()"
+    return characterInfo['desc'] == "" || characterInfo['desc'] == null
+      ? "I am " + characterInfo['name']
       : characterInfo['desc'];
   }
 }
