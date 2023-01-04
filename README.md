@@ -1,16 +1,15 @@
-# effective
+# Effective стажировка
 
-A new Flutter project.
+Проект реализующий просмотр карточек героев Marvel с кратким и подробным описаниями
 
-## Getting Started
+## Технологии
 
-This project is a starting point for a Flutter application.
+Использован язык программирования Dart(Flutter)
 
-A few resources to get you started if this is your first Flutter project:
+Основные библиотеки:
+- [dio](https://pub.dev/packages/dio)
+- [provider](https://pub.dev/packages/provider)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Дополнительные ссылки
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Для получения данных использовался [MarvelAPI](https://developer.marvel.com)
